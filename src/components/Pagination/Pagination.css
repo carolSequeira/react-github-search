@@ -1,0 +1,43 @@
+
+.pageNumbers {
+    list-style: none;
+    display: flex;
+}
+
+.pageNumbers li {
+    padding: 10px;
+    border: 1px solid purple;
+    cursor: pointer;
+}
+
+.pageNumbers li.active {
+    background-color: #b491c8;
+    color: white;
+}
+
+.pageNumbers li button {
+    background-color: transparent;
+    border: none;
+    color: purple;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.pageNumbers li:hover {
+    background-color: #b491c8;
+    color: white;
+}
+
+.pageNumbers li button:focus {
+    outline: none;
+}
+
+.loadmore {
+    padding: 1rem;
+    background-color: transparent;
+
+    color: purple;
+    font-size: 1.2rem;
+    border: 1px solid purple;
+    cursor: pointer;
+}
