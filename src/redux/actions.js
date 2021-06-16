@@ -15,20 +15,6 @@ export function fetchReposAction(payload) {
     };
 }
 
-export function updateLanguage(payload) {
-    return {
-        type: LANGUAGE_CHANGE,
-        payload
-    };
-}
-
-export function updateInput(payload) {
-    return {
-        type: INPUT_CHANGE,
-        payload
-    };
-}
-
 export function fetchReposSuccessAction(payload) {
     return {
         type: FETCH_GITHUB_REPO_SUCCESS,

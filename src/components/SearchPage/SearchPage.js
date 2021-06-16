@@ -13,8 +13,6 @@ import {
     fetchReposAction,
     goToPreviousPage,
     updatePage,
-    updateLanguage,
-    updateInput,
     goToNextPage
 } from "../../redux/actions";
 import Header from "../Header/Header";
@@ -92,7 +90,7 @@ export const SearchPage = (props) => {
 
 
     useEffect(() => {
-        if (!props.input) {
+        if (!input) {
             return;
         }
         const fetchData = async () => {
@@ -166,9 +164,7 @@ const mapStateToProps = state => {
         totalItems: state.fetchReposReducer.totalItems,
         totalPages: state.fetchReposReducer.totalPages,
         pageSize: state.fetchReposReducer.pageSize,
-        page: state.fetchReposReducer.page,
-        input: state.fetchReposReducer.input,
-        language: state.fetchReposReducer.language
+        page: state.fetchReposReducer.page
     };
 };
 
@@ -185,12 +181,6 @@ const mapDispatchToProps = dispatch => {
         },
         updatePage: (page) => {
             dispatch(updatePage({ page }));
-        },
-        updateLanguage: (language) => {
-            dispatch(updateLanguage({ language }));
-        },
-        updateInput: (input) => {
-            dispatch(updateInput({ input }));
         }
     };
 };

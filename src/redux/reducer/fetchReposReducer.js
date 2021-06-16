@@ -4,8 +4,6 @@ import {
     FETCH_GITHUB_REPO_SUCCESS,
     UPDATE_PAGE,
     GO_TO_NEXT_SET,
-    LANGUAGE_CHANGE,
-    INPUT_CHANGE,
     GO_TO_PREVIOUS_SET, NEXT_SET_CHANGE_FAILURE, NEXT_SET_CHANGE_SUCCESS,
     PREVIOUS_SET_CHANGE_SUCCESS,
     PREVIOUS_SET_CHANGE_FAILURE
@@ -81,18 +79,6 @@ export default function fetchReposReducer(
                 ...state,
                 payload
             };
-        case LANGUAGE_CHANGE: {
-            return {
-                ...state,
-                language: payload.language
-            }
-        }
-        case INPUT_CHANGE: {
-            return {
-                ...state,
-                input: payload.input
-            }
-        }
 
         default:
             return state;
